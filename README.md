@@ -22,6 +22,8 @@ Nessa aplicação utilizamos as seguintes ferramentas:
 
   * Boostrap;
 
+  * Symfony 3;
+
   * Angular.
 
 A aplicação já esta com a arquiterura inicial pronta e contém um CRUD incial funcionando. No index da aplicação, está o que deverá ser criado.
