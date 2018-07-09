@@ -49,4 +49,39 @@ class InterfaceController extends Controller
             )
         );
     }
+
+    /**
+     * @Route("/produto-index", name="produto_index", options={"expose"=true})
+     */
+    public function indexProdutoAction(Request $request)
+    {
+        return $this->render('AppBundle:interface/produto:index.html.twig');
+    }
+    /**
+     * @Route("/produto-cadastro", name="produto_cadastro", options={"expose"=true})
+     */
+    public function cadastroProdutoAction(Request $request)
+    {
+        $servico = $this->get('api.service.produto');
+
+        $form = $servico->createForm();
+        return $this->render(
+            'AppBundle:interface/produto:cadastro.html.twig',
+            array(
+                'form' => $form->createView(),
+            )
+        );
+    }
+    /**
+     * @Route("/produto-editar/{id}", name="produto_editar", options={"expose"=true})
+     */
+    public function editarProdutoAction(Request $request, $id)
+    {
+        return $this->render(
+            'AppBundle:interface/produto:editar.html.twig',
+            array(
+                'id' => $id,
+            )
+        );
+    }
 }
