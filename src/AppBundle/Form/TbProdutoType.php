@@ -21,6 +21,7 @@ class TbProdutoType extends AbstractType {
                 TextType::class,
                 array(
                     'label' => 'Nome',
+                    'required' => true,
                     'attr' => array (
                     )
                 )
